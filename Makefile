@@ -1,16 +1,16 @@
 NAME = fractal.a
 
-SRC =  ./
+SRC =  ./main.c ./includes/libftprintf.a
 
-INC = ./includes/fdf.h
+INC = ./includes/fractal.h
 
 
 FLAGS = -Wall -Wextra -Werror -lm
 
-MLX = -lmlx -lXext -lX11
+MLX = -lmlx -Lminilibx -lXext -lX11
 
 $(NAME):
-	cc $(FLAGS) main.c $(SRC) $(MLX) -o start
+	cc $(FLAGS) $(SRC) $(MLX) -o start
 
 all:	$(NAME)
 
