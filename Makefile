@@ -1,6 +1,6 @@
 NAME = fractal.a
 
-SRC =  ./main.c ./includes/libftprintf.a
+SRC =  ./main.c ./includes/libftprintf.a ./src/window.c ./src/events_calling.c ./hook/hooks.c
 
 INC = ./includes/fractal.h
 

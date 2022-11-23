@@ -10,15 +10,17 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minilibx/mlx.h"
-#include "printf/ft_printf.h"
+//#include "minilibx/mlx.h"
+#include "./includes/fractal.h"
+//#include "printf/ft_printf.h"
+#include <stdio.h>
 
 int	check_args(int argc, char **argv)
 {
 	argv[0][0] = 'a';
 	if (argc <= 1)
 	{
-		ft_printf("please inform the name of the desired fractal\n");
+		printf("please inform the name of the desired fractal\n");
 		return (-1);
 	}
 	return (1);
@@ -26,7 +28,9 @@ int	check_args(int argc, char **argv)
 
 int	main(int argc, char **argv)
 {
+	t_data props;
 
+	screen(&props, 400, 400, "Ola Mundo");
 	if ((check_args(argc, argv) <= 0))
 		return (-1);
 }
