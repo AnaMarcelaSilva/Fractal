@@ -5,6 +5,8 @@
 int		render(t_data *mlx)
 {
 	background(mlx->img, 0x610812);
+	circle(mlx->img,(t_circle){WIDTH / 2, HEIGHT / 2 , 50, 0x3eff21});
+	rect(mlx->img,(t_props){WIDTH - 100, HEIGHT - 100, 100, 100, 0x3eff21});
 	mlx_put_image_to_window(mlx->init, mlx->win, mlx->img->mlx_img, 0 ,0);
 	return (1);
 }
