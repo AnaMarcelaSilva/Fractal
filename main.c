@@ -29,8 +29,15 @@ int	check_args(int argc, char **argv)
 int	main(int argc, char **argv)
 {
 	t_data props;
+	int		receive_error;
+	
+	receive_error = screen(&props, HEIGHT, WIDTH, "Ola Mundo");
 
-	screen(&props, 400, 400, "Ola Mundo");
 	if ((check_args(argc, argv) <= 0))
 		return (-1);
+	if (receive_error == 404)
+		printf("MLX error, not operation detected");
+	else if (receive_error == 405)
+		printf("MLX->WIN error, not instance detected");
+
 }
